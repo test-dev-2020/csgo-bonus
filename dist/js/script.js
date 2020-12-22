@@ -51,11 +51,9 @@ document.addEventListener('DOMContentLoaded', function(){
   
   function closed(){
     popupBg.classList.remove("visible")
-    content.classList.remove('overflow')
   }
   open.addEventListener('click', function(){
     popupBg.classList.add("visible")
-    content.classList.add('overflow')
    
   })
   close.addEventListener('click', closed)
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
  
-
   
 
   let x, y, raf;

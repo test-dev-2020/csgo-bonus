@@ -239,7 +239,7 @@ template {
 @font-face {
   font-family: 'FuturaBold';
   font-display: swap;
-  src: url("../fonts/FutuBd.woff") format("woff"), url("../fonts/FutuBd.woff2") format("woff2");
+  src: url("../fonts/FutuBd.ttf");
   font-weight: 700;
   font-style: normal;
 }
@@ -247,7 +247,7 @@ template {
 @font-face {
   font-family: 'FuturaItalic';
   font-display: swap;
-  src: url("../fonts/FuturaBoldItalicBT.woff") format("woff"), url("../fonts/FuturaBoldItalicBT.woff2") format("woff2");
+  src: url("../fonts/FuturaBoldItalicBT.ttf");
   font-weight: 700;
   font-style: italic;
 }
@@ -974,6 +974,7 @@ header.header {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 50vh;
+  margin-bottom: 40rem;
 }
 
 .left__logo {
