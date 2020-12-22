@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://buff.bet/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>CSGO Bonus| Buff.bet</title>
+  </head>
+  <body>
+    @@include('_header.html')
+    <div class="content">
+      <div class="overlay"></div>
+      <div class="p250">
+        <img src="img/P250.png" alt="awp" />
+      </div>
+      <div class="container">
+        <div class="awp">
+          <img src="img/AWP.png" alt="awp" />
+        </div>
+
+        <div class="content__inner">
+          <div class="char">
+            <img src="img/Characters.png" alt="char" class="layer" data-speed="1" />
+          </div>
+          <div class="content__left">
+            <a href="https://buff.bet/" class="left__logo">
+              <img src="img/Logo.png" alt="logo" />
+            </a>
+            <div class="left__text">
+              BET ON CS:GO WITH
+              <span>100% BONUS</span>
+            </div>
+            <div class="left__btns">
+              <a href="https://buff.bet/" class="btn bet">BET NOW</a>
+              <div class="btn terms" id="terms">*terms apply</div>
+            </div>
+          </div>
+          <div class="content__steps-wrapper">
+            <div class="content__steps draw">
+              <div class="step step-1">
+                <span>STEP 1</span>
+                Open an account on Buff.bet
+              </div>
+              <div class="step step-2">
+                <span>STEP 2</span>
+                Deposit 20$ or more
+              </div>
+              <div class="step step-3">
+                <span>STEP 3</span>
+                Use bonus code GET100
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup">
+        <div class="popup-bg"></div>
+        <div class="popup-box">
+          <div class="popup-close" id="close">X</div>
+
+          <div class="bonus-code">
+            Bonus code
+            <span>GET100</span>
+          </div>
+          <hr />
+          <p>Min.deposit: 5 EUR</p>
+          <p>Deposit up to: 100 EUR</p>
+          <p>And get up to: 100 EUR</p>
+          <p>Bonus percentage: 100%</p>
+          <p>Valid: 30 days</p>
+          <p>Max. withdrawal: deposit + 2x bonus</p>
+          <hr />
+          <div class="bottom-text">
+            <p>Rollover for sportbook: (bonus + deposit)x10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('_footer.html')
+
+    <script type="text/javascript">
+      function getParameterByName() {
+        return window.location.href.replace(/.*btag=/gi, '')
+      }
+      function setCookie(e, t, o) {
+        var n = ''
+        if (o) {
+          var i = new Date()
+          i.setTime(i.getTime() + 24 * o * 60 * 60 * 1e3), (n = '; expires=' + i.toUTCString())
+        }
+        document.cookie = e + '=' + (t || '') + n + '; domain=.buff.bet;path=/'
+      }
+      function getCookie(e) {
+        for (var t = e + '=', o = document.cookie.split(';'), n = 0; n < o.length; n++) {
+          for (var i = o[n]; ' ' == i.charAt(0); ) i = i.substring(1, i.length)
+          if (0 == i.indexOf(t)) return i.substring(t.length, i.length)
+        }
+        return null
+      }
+      function eraseCookie(e) {
+        document.cookie = e + '=; Max-Age=-99999999;'
+      }
+      setCookie('btag', getParameterByName(), 7)
+    </script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
