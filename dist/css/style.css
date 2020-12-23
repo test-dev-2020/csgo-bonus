@@ -323,7 +323,6 @@ body {
 header.header {
   font-family: 'NeusaNextPro-Regular', sans-serif;
   background-color: #151c24;
-  z-index: 100;
 }
 
 .nav__menu {
@@ -466,7 +465,6 @@ header.header {
 
 .menu__btn {
   display: none;
-  z-index: 100;
 }
 
 .nav__logo-mobile {
@@ -486,7 +484,6 @@ header.header {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
 }
 
 .footer {
@@ -1325,8 +1322,8 @@ header.header {
   min-width: 150rem;
   padding: 0 10rem;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #fd5631;
   background: -webkit-gradient(linear, left top, right top, from(rgba(209, 142, 13, 0)), color-stop(25%, #fd5631), color-stop(75%, #fd5631), to(rgba(209, 142, 13, 0)));
   background: -o-linear-gradient(left, rgba(209, 142, 13, 0) 0%, #fd5631 25%, #fd5631 75%, rgba(209, 142, 13, 0) 100%);
