@@ -64,7 +64,7 @@
   width: 123rem;
 }
 .content__inner {
-  padding-top: 228rem;
+  padding-top: 100rem;
   min-height: 50vh;
   position: relative;
   padding-bottom: 86rem;
@@ -85,7 +85,6 @@
   margin-bottom: 40rem;
 }
 .left__logo {
-  width: 219rem;
   margin-bottom: 25rem;
 }
 .left__text {
@@ -213,6 +212,10 @@
 }
 .step {
   padding: 43rem 30rem;
+  color: white;
+  &:hover {
+    color: #fd5631;
+  }
 }
 .step.step-2 {
   padding: 43rem 70rem;
@@ -262,7 +265,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -286,6 +289,9 @@
   border-radius: 35px;
   p {
     margin: 15rem 0;
+  }
+  .divClipboard {
+    cursor: pointer;
   }
 }
 .popup-close {
@@ -311,6 +317,42 @@
 }
 
 //end popup
+
+#bonus {
+  visibility: none;
+  opacity: 0;
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.clipboardMessage {
+  font-size: 24rem;
+  line-height: 24rem;
+  position: absolute;
+  left: 50%;
+  min-width: 150rem;
+  padding: 0 10rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fd5631;
+  background: linear-gradient(90deg, rgba(209, 142, 13, 0) 0%, #fd5631 25%, #fd5631 75%, rgba(209, 142, 13, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  top: 0rem;
+  visibility: visible;
+  z-index: 500;
+  padding: 10rem 20rem;
+}
+
+.clipboardMessage.visible {
+  top: -100rem;
+  visibility: visible;
+  opacity: 1;
+}
 
 @media (max-width: 1500px) {
   .awp {
@@ -403,8 +445,8 @@
     width: 60%;
   }
   .popup-close {
-    width: 40rem;
-    height: 40rem;
+    width: 50rem;
+    height: 50rem;
     font-size: 30rem;
     right: -15rem;
     top: -15rem;
@@ -433,6 +475,9 @@
     }
   }
   .content__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: auto;
     margin-bottom: 40rem;
   }
@@ -445,7 +490,7 @@
 }
 
 @media (max-width: 420px) {
-  :root {
-    font-size: 0.6px;
+  .left__text {
+    font-size: 42rem;
   }
 }

@@ -239,7 +239,7 @@ template {
 @font-face {
   font-family: 'FuturaBold';
   font-display: swap;
-  src: url("../fonts/FutuBd.ttf");
+  src: url("../fonts/FutuBd.woff2") format("woff2"), url("../fonts/FutuBd.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -247,9 +247,9 @@ template {
 @font-face {
   font-family: 'FuturaItalic';
   font-display: swap;
-  src: url("../fonts/FuturaBoldItalicBT.ttf");
+  src: url("../fonts/FuturaBoldItalicBT.woff2") format("woff2"), url("../fonts/FuturaBoldItalicBT.woff") format("woff");
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 body {
@@ -943,7 +943,7 @@ header.header {
 }
 
 .content__inner {
-  padding-top: 228rem;
+  padding-top: 100rem;
   min-height: 50vh;
   position: relative;
   padding-bottom: 86rem;
@@ -978,7 +978,6 @@ header.header {
 }
 
 .left__logo {
-  width: 219rem;
   margin-bottom: 25rem;
 }
 
@@ -1180,6 +1179,11 @@ header.header {
 
 .step {
   padding: 43rem 30rem;
+  color: white;
+}
+
+.step:hover {
+  color: #fd5631;
 }
 
 .step.step-2 {
@@ -1242,7 +1246,7 @@ header.header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1272,6 +1276,10 @@ header.header {
   margin: 15rem 0;
 }
 
+.popup-box .divClipboard {
+  cursor: pointer;
+}
+
 .popup-close {
   cursor: pointer;
   position: absolute;
@@ -1297,6 +1305,46 @@ header.header {
 
 .bonus-code span {
   color: #fd5631;
+}
+
+#bonus {
+  visibility: none;
+  opacity: 0;
+}
+
+#bonus.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.clipboardMessage {
+  font-size: 24rem;
+  line-height: 24rem;
+  position: absolute;
+  left: 50%;
+  min-width: 150rem;
+  padding: 0 10rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fd5631;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(209, 142, 13, 0)), color-stop(25%, #fd5631), color-stop(75%, #fd5631), to(rgba(209, 142, 13, 0)));
+  background: -o-linear-gradient(left, rgba(209, 142, 13, 0) 0%, #fd5631 25%, #fd5631 75%, rgba(209, 142, 13, 0) 100%);
+  background: linear-gradient(90deg, rgba(209, 142, 13, 0) 0%, #fd5631 25%, #fd5631 75%, rgba(209, 142, 13, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  top: 0rem;
+  visibility: visible;
+  z-index: 500;
+  padding: 10rem 20rem;
+}
+
+.clipboardMessage.visible {
+  top: -100rem;
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 1500px) {
@@ -1420,7 +1468,9 @@ header.header {
   }
 
   .menu__list.active .mobile {
-    display: block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 
   .menu__list.active li a {
@@ -1590,8 +1640,8 @@ header.header {
   }
 
   .popup-close {
-    width: 40rem;
-    height: 40rem;
+    width: 50rem;
+    height: 50rem;
     font-size: 30rem;
     right: -15rem;
     top: -15rem;
@@ -1629,6 +1679,15 @@ header.header {
   }
 
   .content__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: auto;
     margin-bottom: 40rem;
   }
@@ -1670,8 +1729,8 @@ header.header {
 }
 
 @media (max-width: 420px) {
-  :root {
-    font-size: 0.6px;
+  .left__text {
+    font-size: 42rem;
   }
 }
 

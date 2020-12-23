@@ -180,7 +180,7 @@ header.header {
       width: 300px;
       background-color: #1a2129;
       & .mobile {
-        display: block;
+        display: inline-flex;
       }
       li a {
         width: 100%;

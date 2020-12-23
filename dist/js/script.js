@@ -51,9 +51,12 @@ document.addEventListener('DOMContentLoaded', function(){
   
   function closed(){
     popupBg.classList.remove("visible")
+    document.body.style.overflow = "inherit";
   }
   open.addEventListener('click', function(){
     popupBg.classList.add("visible")
+    document.body.style.overflow = "hidden";
+    
    
   })
   close.addEventListener('click', closed)
@@ -90,6 +93,46 @@ document.addEventListener('DOMContentLoaded', function(){
     raf = null;
   }
   
+
+
+  const text = document.querySelector('#bonus')
+  const elm =document.querySelectorAll('.divClipboard')
+  const clipboardMessage = document.querySelector('.clipboardMessage')
+
+  
+  function copyClipboard() {
+   
+    // for Internet Explorer
+  
+    if(document.body.createTextRange) {
+      let range = document.body.createTextRange();
+      range.moveToElementText(text);
+      range.select();
+      document.execCommand("Copy");
+      
+    }
+    else if(window.getSelection) {
+      // other browsers
+  
+      let selection = window.getSelection();
+      let range = document.createRange();
+      range.selectNodeContents(text);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+    }
+  }
+  elm.forEach(elem=>{
+    elem.addEventListener('click', function(){
+    copyClipboard()
+    clipboardMessage.classList.add('visible')
+    
+    setTimeout(()=>{
+      clipboardMessage.classList.remove('visible')
+
+    }, 1000)
+  } )})
+
 })
 
 

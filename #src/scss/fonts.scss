@@ -37,7 +37,7 @@
 @font-face {
   font-family: 'FuturaBold';
   font-display: swap;
-  src: url('../fonts/FutuBd.ttf');
+  src: url('../fonts/FutuBd.woff2') format('woff2'), url('../fonts/FutuBd.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -45,9 +45,9 @@
 @font-face {
   font-family: 'FuturaItalic';
   font-display: swap;
-  src: url('../fonts/FuturaBoldItalicBT.ttf');
+  src: url('../fonts/FuturaBoldItalicBT.woff2') format('woff2'), url('../fonts/FuturaBoldItalicBT.woff') format('woff');
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 // @font-face {
 //   font-family: 'NeusaNextPro-Bold';

@@ -12,6 +12,7 @@
   <body>
     @@include('_header.html')
     <div class="content">
+      <div class="content-bg"></div>
       <div class="overlay"></div>
       <div class="p250">
         <img src="img/P250.png" alt="awp" />
@@ -40,18 +41,19 @@
           </div>
           <div class="content__steps-wrapper">
             <div class="content__steps draw">
-              <div class="step step-1">
+              <a href="https://buff.bet/en/register" class="step step-1">
                 <span>STEP 1</span>
                 Open an account on Buff.bet
-              </div>
-              <div class="step step-2">
+              </a>
+              <a href="https://buff.bet/en/register" class="step step-2">
                 <span>STEP 2</span>
                 Deposit 20$ or more
-              </div>
-              <div class="step step-3">
+              </a>
+              <a href="https://buff.bet/en/register" class="step step-3 divClipboard">
+                <div id="bonus">GET100</div>
                 <span>STEP 3</span>
                 Use bonus code GET100
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -61,10 +63,10 @@
         <div class="popup-bg"></div>
         <div class="popup-box">
           <div class="popup-close" id="close">X</div>
-
+          <div class="clipboardMessage">copied to clipboard</div>
           <div class="bonus-code">
             Bonus code
-            <span>GET100</span>
+            <span class="divClipboard">GET100</span>
           </div>
           <hr />
           <p>Min.deposit: 5 EUR</p>
