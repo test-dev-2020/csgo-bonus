@@ -318,6 +318,7 @@
 //end popup
 
 #bonus {
+  position: absolute;
   visibility: none;
   opacity: 0;
   &.visible {
