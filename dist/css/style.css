@@ -615,9 +615,8 @@ header.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #1a2129;
   padding: 10px;
   -ms-flex-wrap: wrap;
